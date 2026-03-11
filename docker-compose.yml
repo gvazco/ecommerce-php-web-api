@@ -4,7 +4,7 @@ services:
   dbe:
     image: mysql:8.0
     environment:
-      MYSQL_ROOT_PASSWORD: EF300595
+      MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: ecommerce
       MYSQL_USER: gbvazco
       MYSQL_PASSWORD: EF300595
