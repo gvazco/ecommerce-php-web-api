@@ -1,10 +1,10 @@
 version: "3.8"
 
 services:
-  db_ecommerce:
+  dbe:
     image: mysql:8.0
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_ROOT_PASSWORD: EF300595
       MYSQL_DATABASE: ecommerce
       MYSQL_USER: gbvazco
       MYSQL_PASSWORD: EF300595
@@ -13,28 +13,28 @@ services:
     networks:
       - internal
 
-  api_ecommerce:
+  apiecommerce:
     build:
-      context: ./api
+      context: ./apie
       dockerfile: Dockerfile
     env_file:
       - .env
     depends_on:
-      - db_ecommerce
+      - dbe
     networks:
       - internal
     # Dokploy will use labels for domains, but we'll leave it as is so you can configure it.
     # labels:
     #   - "dokploy.domain=api.tudominio.com"
 
-  web_ecommerce:
+  webecommerce:
     build:
       context: ./web
       dockerfile: Dockerfile
     env_file:
       - .env
     depends_on:
-      - db_ecommerce
+      - dbe
     networks:
       - internal
     # labels:

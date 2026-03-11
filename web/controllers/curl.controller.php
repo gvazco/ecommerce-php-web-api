@@ -5,17 +5,16 @@ class CurlController
 {
 
 	/*=============================================
-	Peticiones a la API
-	=============================================*/
+	 Peticiones a la API
+	 =============================================*/
 
 	static public function request($url, $method, $fields)
 	{
 
 		$curl = curl_init();
 
-		$apiUrl = getenv("API_URL") ?: 'http://api_ecommerce/';
 		curl_setopt_array($curl, array(
-			CURLOPT_URL => $apiUrl . $url,
+			CURLOPT_URL => 'http://apiecommerce' . $url,
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,
@@ -30,17 +29,33 @@ class CurlController
 		));
 
 		$response = curl_exec($curl);
+		$error = curl_error($curl);
 
 		curl_close($curl);
 
-		$response = json_decode($response);
-		return $response;
+		if ($error) {
+			return (object)[
+				"status" => 500,
+				"results" => "CURL Error: " . $error
+			];
+		}
+
+		$data = json_decode($response);
+
+		if (json_last_error() !== JSON_ERROR_NONE) {
+			return (object)[
+				"status" => 500,
+				"results" => "Invalid JSON response from API: " . $response
+			];
+		}
+
+		return $data;
 
 	}
 
 	/*=============================================
-	Peticiones a la API de PAYPAL
-	=============================================*/
+	 Peticiones a la API de PAYPAL
+	 =============================================*/
 
 	static public function paypal($url, $method, $fields)
 	{
@@ -52,8 +67,8 @@ class CurlController
 		$basic = base64_encode($clientId . ":" . $secretClient);
 
 		/*=============================================
-		ACCESS TOKEN
-		=============================================*/
+		 ACCESS TOKEN
+		 =============================================*/
 
 		$curl = curl_init();
 
@@ -85,8 +100,8 @@ class CurlController
 		if (!empty($token)) {
 
 			/*=============================================
-			CREAR ORDEN
-			=============================================*/
+			 CREAR ORDEN
+			 =============================================*/
 
 			$curl = curl_init();
 
@@ -119,8 +134,8 @@ class CurlController
 	}
 
 	/*=============================================
-	Peticiones a la API de DLOCAL
-	=============================================*/
+	 Peticiones a la API de DLOCAL
+	 =============================================*/
 
 	static public function dlocal($url, $method, $fields)
 	{
@@ -158,8 +173,8 @@ class CurlController
 	}
 
 	/*=============================================
-	Peticiones a la API de MERCADO PAGO
-	=============================================*/
+	 Peticiones a la API de MERCADO PAGO
+	 =============================================*/
 
 	static public function mercadoPago($url, $method, $fields)
 	{
@@ -195,8 +210,8 @@ class CurlController
 	}
 
 	/*=============================================
-	API GEOPLUGIN
-	=============================================*/
+	 API GEOPLUGIN
+	 =============================================*/
 
 	static public function apiGeoplugin($ip)
 	{
