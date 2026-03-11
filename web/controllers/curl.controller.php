@@ -13,7 +13,7 @@ class CurlController
 
 		$curl = curl_init();
 
-		$apiUrl = getenv("API_URL") ?: 'https://api_ecommerce/';
+		$apiUrl = getenv("API_URL") ?: 'http://api_ecommerce/';
 		curl_setopt_array($curl, array(
 			CURLOPT_URL => $apiUrl . $url,
 			CURLOPT_RETURNTRANSFER => true,

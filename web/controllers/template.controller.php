@@ -20,7 +20,8 @@ class TemplateController{
 
 	static public function path(){
 
-		if(!empty($_SERVER["HTTPS"]) && ("on" == $_SERVER["HTTPS"])){
+		if((!empty($_SERVER["HTTPS"]) && ("on" == $_SERVER["HTTPS"])) || 
+		   (!empty($_SERVER["HTTP_X_FORWARDED_PROTO"]) && $_SERVER["HTTP_X_FORWARDED_PROTO"] == "https")){
 
 			return "https://".$_SERVER["SERVER_NAME"]."/";
 
@@ -300,7 +301,8 @@ class TemplateController{
 
 	static public function urlRedirect(){
 
-		if(!empty($_SERVER["HTTPS"]) && ("on" == $_SERVER["HTTPS"])){
+		if((!empty($_SERVER["HTTPS"]) && ("on" == $_SERVER["HTTPS"])) || 
+		   (!empty($_SERVER["HTTP_X_FORWARDED_PROTO"]) && $_SERVER["HTTP_X_FORWARDED_PROTO"] == "https")){
 
 			return "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
