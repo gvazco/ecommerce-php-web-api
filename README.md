@@ -34,4 +34,4 @@ Configure database connection in `.env`:
    - For API service: api-ecommerce.core-hub-plex.cloud
 5. Ensure DNS points to your Dokploy instance.
 
-The database will be created and initialized automatically using the `pos.sql` script.
+The database will be created and initialized automatically using the `ecommerce.sql` script.

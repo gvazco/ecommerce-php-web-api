@@ -37,7 +37,7 @@ CREATE TABLE `admins` (
   `token_exp_admin` text,
   `date_created_admin` date DEFAULT NULL,
   `date_updated_admin` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `admins`
@@ -65,7 +65,7 @@ CREATE TABLE `banners` (
   `status_banner` int NOT NULL DEFAULT '1',
   `date_created_banner` date DEFAULT NULL,
   `date_updated_banner` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `banners`
@@ -95,7 +95,7 @@ CREATE TABLE `carts` (
   `method_cart` text,
   `date_created_cart` date DEFAULT NULL,
   `date_updated_cart` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -117,7 +117,7 @@ CREATE TABLE `categories` (
   `status_category` int DEFAULT '1',
   `date_created_category` date DEFAULT NULL,
   `date_updated_category` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `categories`
@@ -142,7 +142,7 @@ CREATE TABLE `favorites` (
   `id_product_favorite` int NOT NULL DEFAULT '0',
   `date_created_favorite` date DEFAULT NULL,
   `date_updated_favorite` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `favorites`
@@ -178,7 +178,7 @@ CREATE TABLE `orders` (
   `end_date_order` date DEFAULT NULL,
   `date_created_order` date DEFAULT NULL,
   `date_updated_order` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `orders`
@@ -221,7 +221,7 @@ CREATE TABLE `products` (
   `status_product` int NOT NULL DEFAULT '1',
   `date_created_product` date DEFAULT NULL,
   `date_updated_product` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `products`
@@ -293,7 +293,7 @@ CREATE TABLE `slides` (
   `status_slide` int NOT NULL DEFAULT '1',
   `date_created_slide` date DEFAULT NULL,
   `date_updated_slide` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `slides`
@@ -318,7 +318,7 @@ CREATE TABLE `socials` (
   `color_social` text,
   `date_created_social` date DEFAULT NULL,
   `date_updated_social` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `socials`
@@ -349,7 +349,7 @@ CREATE TABLE `subcategories` (
   `status_subcategory` int NOT NULL DEFAULT '1',
   `date_created_subcategory` date DEFAULT NULL,
   `date_updated_subcategory` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `subcategories`
@@ -393,7 +393,7 @@ CREATE TABLE `templates` (
   `active_template` text,
   `date_created_template` date DEFAULT NULL,
   `date_updated_template` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `templates`
@@ -426,7 +426,7 @@ CREATE TABLE `users` (
   `phone_user` text,
   `date_created_user` date DEFAULT NULL,
   `date_updated_user` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `users`
@@ -457,87 +457,87 @@ CREATE TABLE `variants` (
   `stock_variant` int NOT NULL DEFAULT '0',
   `date_created_variant` date DEFAULT NULL,
   `date_updated_variant` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `variants`
 --
 
 INSERT INTO `variants` (`id_variant`, `id_product_variant`, `type_variant`, `media_variant`, `description_variant`, `cost_variant`, `price_variant`, `offer_variant`, `end_offer_variant`, `stock_variant`, `date_created_variant`, `date_updated_variant`) VALUES
-(2, 1, 'gallery', '[\"78123.jpg\",\"87200.jpg\"]', 'Conjunto Beige', 100, 200, '150', '0000-00-00', 100, '2023-07-26', '2023-08-30 20:45:29'),
-(7, 1, 'gallery', '[\"61137.jpg\",\"17566.jpg\"]', 'Conjunto Blanco', 100, 200, '150', '0000-00-00', 100, '2023-07-28', '2023-08-30 20:45:41'),
-(9, 1, 'gallery', '[\"59749.jpg\",\"19866.jpg\"]', 'Conjunto Azul', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:45:43'),
-(10, 4, 'gallery', '[\"28350.jpg\",\"11684.jpg\"]', 'Conjunto Blanco', 100, 200, '150', '0000-00-00', 100, '2023-07-26', '2023-08-30 20:45:59'),
-(11, 4, 'gallery', '[\"21325.jpg\",\"86726.jpg\"]', 'Conjunto Beige', 100, 200, '150', '0000-00-00', 100, '2023-07-28', '2023-08-30 20:46:03'),
-(12, 4, 'gallery', '[\"59749.jpg\",\"19866.jpg\"]', 'Conjunto Azul', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:46:08'),
-(13, 5, 'gallery', '[\"20984.jpg\",\"98565.jpg\"]', 'Conjunto Azul', 100, 200, '150', '0000-00-00', 100, '2023-07-26', '2023-08-30 20:46:12'),
-(14, 5, 'gallery', '[\"61137.jpg\",\"17566.jpg\"]', 'Conjunto Blanco', 100, 200, '150', '0000-00-00', 100, '2023-07-28', '2023-08-30 20:46:18'),
-(15, 5, 'gallery', '[\"51505.jpg\",\"42147.jpg\"]', 'Conjunto Beige', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:46:21'),
-(16, 6, 'gallery', '[\"38789.jpg\",\"71099.jpg\"]', 'Conjunto Beige', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:46:25'),
-(17, 6, 'gallery', '[\"26258.jpg\",\"79873.jpg\"]', 'Conjunto Blanco', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:46:31'),
-(18, 7, 'gallery', '[\"85656.jpg\",\"50072.jpg\"]', 'Conjunto Blanco', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:46:39'),
-(19, 7, 'gallery', '[\"85265.jpg\",\"44462.jpg\"]', 'Conjunto Beige', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:46:46'),
-(20, 8, 'gallery', '[\"81003.jpg\",\"28510.jpg\"]', 'Conjunto deportivo verde', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:46:51'),
-(21, 9, 'gallery', '[\"78123.jpg\",\"87200.jpg\"]', 'Conjunto Beige', 100, 200, '150', '0000-00-00', 100, '2023-07-26', '2023-08-30 20:46:58'),
-(22, 9, 'gallery', '[\"61137.jpg\",\"17566.jpg\"]', 'Conjunto Blanco', 100, 200, '150', '0000-00-00', 100, '2023-07-28', '2023-08-30 20:47:03'),
-(23, 9, 'gallery', '[\"59749.jpg\",\"19866.jpg\"]', 'Conjunto Azul', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:47:07'),
-(24, 10, 'gallery', '[\"28350.jpg\",\"11684.jpg\"]', 'Conjunto Blanco', 100, 200, '150', '0000-00-00', 100, '2023-07-26', '2023-08-30 20:47:12'),
-(25, 10, 'gallery', '[\"21325.jpg\",\"86726.jpg\"]', 'Conjunto Beige', 100, 200, '150', '0000-00-00', 100, '2023-07-28', '2023-08-30 20:47:18'),
-(26, 10, 'gallery', '[\"59749.jpg\",\"19866.jpg\"]', 'Conjunto Azul', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:47:22'),
-(27, 11, 'gallery', '[\"20984.jpg\",\"98565.jpg\"]', 'Conjunto Azul', 100, 200, '150', '0000-00-00', 100, '2023-07-26', '2023-08-30 20:47:26'),
-(28, 11, 'gallery', '[\"61137.jpg\",\"17566.jpg\"]', 'Conjunto Blanco', 100, 200, '150', '0000-00-00', 100, '2023-07-28', '2023-08-30 20:47:31'),
-(29, 11, 'gallery', '[\"51505.jpg\",\"42147.jpg\"]', 'Conjunto Beige', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:47:34'),
-(30, 12, 'gallery', '[\"38789.jpg\",\"71099.jpg\"]', 'Conjunto Beige', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:47:40'),
-(31, 12, 'gallery', '[\"26258.jpg\",\"79873.jpg\"]', 'Conjunto Blanco', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:47:44'),
-(32, 13, 'gallery', '[\"86981.jpg\",\"88573.jpg\"]', 'Conjunto Blanco', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:47:54'),
-(33, 13, 'gallery', '[\"40517.jpg\",\"54102.jpg\"]', 'Conjunto Beige', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:47:58'),
-(34, 14, 'gallery', '[\"81003.jpg\",\"28510.jpg\"]', 'Conjunto deportivo verde', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:48:02'),
-(35, 15, 'gallery', '[\"78123.jpg\",\"87200.jpg\"]', 'Conjunto Beige', 100, 200, '150', '0000-00-00', 100, '2023-07-26', '2023-08-30 20:48:07'),
-(36, 15, 'gallery', '[\"61137.jpg\",\"17566.jpg\"]', 'Conjunto Blanco', 100, 200, '150', '0000-00-00', 100, '2023-07-28', '2023-08-30 20:48:10'),
-(37, 15, 'gallery', '[\"59749.jpg\",\"19866.jpg\"]', 'Conjunto Azul', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:48:15'),
-(38, 16, 'gallery', '[\"28350.jpg\",\"11684.jpg\"]', 'Conjunto Blanco', 100, 200, '150', '0000-00-00', 100, '2023-07-26', '2023-08-30 20:48:20'),
-(39, 16, 'gallery', '[\"21325.jpg\",\"86726.jpg\"]', 'Conjunto Beige', 100, 200, '150', '0000-00-00', 100, '2023-07-28', '2023-08-30 20:48:25'),
-(40, 16, 'gallery', '[\"59749.jpg\",\"19866.jpg\"]', 'Conjunto Azul', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:48:33'),
-(41, 17, 'gallery', '[\"20984.jpg\",\"98565.jpg\"]', 'Conjunto Azul', 100, 200, '150', '0000-00-00', 100, '2023-07-26', '2023-09-21 21:46:38'),
+(2, 1, 'gallery', '[\"78123.jpg\",\"87200.jpg\"]', 'Conjunto Beige', 100, 200, '150', NULL, 100, '2023-07-26', '2023-08-30 20:45:29'),
+(7, 1, 'gallery', '[\"61137.jpg\",\"17566.jpg\"]', 'Conjunto Blanco', 100, 200, '150', NULL, 100, '2023-07-28', '2023-08-30 20:45:41'),
+(9, 1, 'gallery', '[\"59749.jpg\",\"19866.jpg\"]', 'Conjunto Azul', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:45:43'),
+(10, 4, 'gallery', '[\"28350.jpg\",\"11684.jpg\"]', 'Conjunto Blanco', 100, 200, '150', NULL, 100, '2023-07-26', '2023-08-30 20:45:59'),
+(11, 4, 'gallery', '[\"21325.jpg\",\"86726.jpg\"]', 'Conjunto Beige', 100, 200, '150', NULL, 100, '2023-07-28', '2023-08-30 20:46:03'),
+(12, 4, 'gallery', '[\"59749.jpg\",\"19866.jpg\"]', 'Conjunto Azul', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:46:08'),
+(13, 5, 'gallery', '[\"20984.jpg\",\"98565.jpg\"]', 'Conjunto Azul', 100, 200, '150', NULL, 100, '2023-07-26', '2023-08-30 20:46:12'),
+(14, 5, 'gallery', '[\"61137.jpg\",\"17566.jpg\"]', 'Conjunto Blanco', 100, 200, '150', NULL, 100, '2023-07-28', '2023-08-30 20:46:18'),
+(15, 5, 'gallery', '[\"51505.jpg\",\"42147.jpg\"]', 'Conjunto Beige', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:46:21'),
+(16, 6, 'gallery', '[\"38789.jpg\",\"71099.jpg\"]', 'Conjunto Beige', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:46:25'),
+(17, 6, 'gallery', '[\"26258.jpg\",\"79873.jpg\"]', 'Conjunto Blanco', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:46:31'),
+(18, 7, 'gallery', '[\"85656.jpg\",\"50072.jpg\"]', 'Conjunto Blanco', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:46:39'),
+(19, 7, 'gallery', '[\"85265.jpg\",\"44462.jpg\"]', 'Conjunto Beige', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:46:46'),
+(20, 8, 'gallery', '[\"81003.jpg\",\"28510.jpg\"]', 'Conjunto deportivo verde', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:46:51'),
+(21, 9, 'gallery', '[\"78123.jpg\",\"87200.jpg\"]', 'Conjunto Beige', 100, 200, '150', NULL, 100, '2023-07-26', '2023-08-30 20:46:58'),
+(22, 9, 'gallery', '[\"61137.jpg\",\"17566.jpg\"]', 'Conjunto Blanco', 100, 200, '150', NULL, 100, '2023-07-28', '2023-08-30 20:47:03'),
+(23, 9, 'gallery', '[\"59749.jpg\",\"19866.jpg\"]', 'Conjunto Azul', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:47:07'),
+(24, 10, 'gallery', '[\"28350.jpg\",\"11684.jpg\"]', 'Conjunto Blanco', 100, 200, '150', NULL, 100, '2023-07-26', '2023-08-30 20:47:12'),
+(25, 10, 'gallery', '[\"21325.jpg\",\"86726.jpg\"]', 'Conjunto Beige', 100, 200, '150', NULL, 100, '2023-07-28', '2023-08-30 20:47:18'),
+(26, 10, 'gallery', '[\"59749.jpg\",\"19866.jpg\"]', 'Conjunto Azul', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:47:22'),
+(27, 11, 'gallery', '[\"20984.jpg\",\"98565.jpg\"]', 'Conjunto Azul', 100, 200, '150', NULL, 100, '2023-07-26', '2023-08-30 20:47:26'),
+(28, 11, 'gallery', '[\"61137.jpg\",\"17566.jpg\"]', 'Conjunto Blanco', 100, 200, '150', NULL, 100, '2023-07-28', '2023-08-30 20:47:31'),
+(29, 11, 'gallery', '[\"51505.jpg\",\"42147.jpg\"]', 'Conjunto Beige', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:47:34'),
+(30, 12, 'gallery', '[\"38789.jpg\",\"71099.jpg\"]', 'Conjunto Beige', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:47:40'),
+(31, 12, 'gallery', '[\"26258.jpg\",\"79873.jpg\"]', 'Conjunto Blanco', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:47:44'),
+(32, 13, 'gallery', '[\"86981.jpg\",\"88573.jpg\"]', 'Conjunto Blanco', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:47:54'),
+(33, 13, 'gallery', '[\"40517.jpg\",\"54102.jpg\"]', 'Conjunto Beige', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:47:58'),
+(34, 14, 'gallery', '[\"81003.jpg\",\"28510.jpg\"]', 'Conjunto deportivo verde', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:48:02'),
+(35, 15, 'gallery', '[\"78123.jpg\",\"87200.jpg\"]', 'Conjunto Beige', 100, 200, '150', NULL, 100, '2023-07-26', '2023-08-30 20:48:07'),
+(36, 15, 'gallery', '[\"61137.jpg\",\"17566.jpg\"]', 'Conjunto Blanco', 100, 200, '150', NULL, 100, '2023-07-28', '2023-08-30 20:48:10'),
+(37, 15, 'gallery', '[\"59749.jpg\",\"19866.jpg\"]', 'Conjunto Azul', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:48:15'),
+(38, 16, 'gallery', '[\"28350.jpg\",\"11684.jpg\"]', 'Conjunto Blanco', 100, 200, '150', NULL, 100, '2023-07-26', '2023-08-30 20:48:20'),
+(39, 16, 'gallery', '[\"21325.jpg\",\"86726.jpg\"]', 'Conjunto Beige', 100, 200, '150', NULL, 100, '2023-07-28', '2023-08-30 20:48:25'),
+(40, 16, 'gallery', '[\"59749.jpg\",\"19866.jpg\"]', 'Conjunto Azul', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:48:33'),
+(41, 17, 'gallery', '[\"20984.jpg\",\"98565.jpg\"]', 'Conjunto Azul', 100, 200, '150', NULL, 100, '2023-07-26', '2023-09-21 21:46:38'),
 (42, 17, 'gallery', '[\"61137.jpg\",\"17566.jpg\"]', 'Conjunto Blanco', 100, 180, '140', '2023-10-01', 0, '2023-07-28', '2023-09-21 22:34:36'),
-(43, 17, 'gallery', '[\"51505.jpg\",\"42147.jpg\"]', 'Conjunto Beige', 100, 210, '180', '0000-00-00', 30, '2023-08-03', '2023-09-21 21:47:37'),
-(44, 18, 'gallery', '[\"38789.jpg\",\"71099.jpg\"]', 'Conjunto Beige', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:48:49'),
-(45, 18, 'gallery', '[\"26258.jpg\",\"79873.jpg\"]', 'Conjunto Blanco', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:48:54'),
-(46, 19, 'gallery', '[\"86981.jpg\",\"88573.jpg\"]', 'Conjunto Blanco', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:48:57'),
-(47, 19, 'gallery', '[\"40517.jpg\",\"54102.jpg\"]', 'Conjunto Beige', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:49:01'),
-(48, 20, 'gallery', '[\"81003.jpg\",\"28510.jpg\"]', 'Conjunto deportivo verde', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:49:06'),
-(49, 21, 'gallery', '[\"23224.jpg\",\"34013.jpg\",\"66353.jpg\"]', 'Tennis Verde', 100, 200, '150', '0000-00-00', 0, '2023-08-03', '2023-08-30 20:49:12'),
-(50, 21, 'gallery', '[\"38033.jpg\",\"97518.jpg\",\"79550.jpg\",\"41346.jpg\",\"98179.jpg\"]', 'Tennis Azul', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:49:18'),
-(51, 21, 'gallery', '[\"21891.jpg\",\"88137.jpg\",\"69877.jpg\",\"29563.jpg\",\"61658.jpg\"]', 'Tennis Rojo', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:49:25'),
-(52, 22, 'gallery', '[\"38033.jpg\",\"97518.jpg\",\"79550.jpg\",\"41346.jpg\",\"98179.jpg\"]', 'Tennis Azul', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:49:34'),
-(53, 22, 'gallery', '[\"99902.jpg\",\"61653.jpg\",\"77377.jpg\",\"34013.jpg\",\"66353.jpg\"]', 'Tennis Verde', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:49:38'),
-(54, 22, 'gallery', '[\"21891.jpg\",\"88137.jpg\",\"69877.jpg\",\"29563.jpg\",\"61658.jpg\"]', 'Tennis Rojo', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:49:43'),
-(55, 23, 'gallery', '[\"21891.jpg\",\"88137.jpg\",\"69877.jpg\",\"29563.jpg\",\"61658.jpg\"]', 'Tennis Rojo', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:49:49'),
-(56, 23, 'gallery', '[\"99902.jpg\",\"61653.jpg\",\"77377.jpg\",\"34013.jpg\",\"66353.jpg\"]', 'Tennis Verde', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:49:55'),
-(57, 23, 'gallery', '[\"38033.jpg\",\"97518.jpg\",\"79550.jpg\",\"41346.jpg\",\"98179.jpg\"]', 'Tennis Azul', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:50:12'),
-(58, 24, 'gallery', '[\"82088.jpg\",\"45600.jpg\"]', 'Calzado masculino', 100, 200, '150', '0000-00-00', 100, '2023-08-03', '2023-08-30 20:50:24'),
-(59, 25, 'video', 'https://youtu.be/sj8dV_gPKYw', 'Curso de CSS', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:06'),
-(60, 26, 'video', 'https://youtu.be/OVLptbCMny0', 'Curso de Bootstrap', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:10'),
-(61, 27, 'video', 'https://youtu.be/Sl5FaskVpD4', 'Curso de javascript', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:11'),
-(62, 28, 'video', 'https://youtu.be/QnQ9uhaa9sk', 'Curso de jQuery', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:12'),
-(63, 29, 'video', 'https://youtu.be/ntiWg5GIzAc', 'Curso de Canvas', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:13'),
-(64, 30, 'video', 'https://youtu.be/hZsQ_vVPwW0', 'Curso de PHP', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:14'),
-(65, 31, 'video', 'https://youtu.be/sj8dV_gPKYw', 'Curso de CSS', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:15'),
-(66, 32, 'video', 'https://youtu.be/OVLptbCMny0', 'Curso de Bootstrap', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:16'),
-(67, 33, 'video', 'https://youtu.be/Sl5FaskVpD4', 'Curso de javascript', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:20'),
-(68, 34, 'video', 'https://youtu.be/QnQ9uhaa9sk', 'Curso de jQuery', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:21'),
-(69, 35, 'video', 'https://youtu.be/ntiWg5GIzAc', 'Curso de Canvas', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:23'),
-(70, 36, 'video', 'https://youtu.be/hZsQ_vVPwW0', 'Curso de PHP', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:24'),
-(71, 37, 'video', 'https://youtu.be/sj8dV_gPKYw', 'Curso de CSS', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:25'),
-(72, 38, 'video', 'https://youtu.be/OVLptbCMny0', 'Curso de Bootstrap', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:26'),
-(73, 39, 'video', 'https://youtu.be/Sl5FaskVpD4', 'Curso de javascript', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:29'),
-(74, 40, 'video', 'https://youtu.be/QnQ9uhaa9sk', 'Curso de jQuery', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:31'),
-(75, 41, 'video', 'https://youtu.be/ntiWg5GIzAc', 'Curso de Canvas', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:32'),
-(76, 42, 'video', 'https://youtu.be/hZsQ_vVPwW0', 'Curso de PHP', 10, 30, '19', '0000-00-00', 0, '2023-08-05', '2023-08-30 20:51:33'),
-(77, 43, 'gallery', '[\"72409.jpg\"]', 'Collar', 10, 0, '0', '0000-00-00', 100, '2023-08-08', '2023-08-30 20:52:05'),
-(78, 44, 'gallery', '[\"36094.jpg\"]', 'Maleta Gris', 10, 0, '0', '0000-00-00', 100, '2023-08-08', '2023-08-30 20:52:09'),
-(79, 45, 'gallery', '[\"51340.jpg\"]', 'Maleta Verde', 10, 0, '0', '0000-00-00', 100, '2023-08-08', '2023-08-30 20:52:10'),
-(80, 46, 'gallery', '[\"72980.jpg\"]', 'Anillo', 10, 0, '0', '0000-00-00', 100, '2023-08-08', '2023-08-30 20:52:12');
+(43, 17, 'gallery', '[\"51505.jpg\",\"42147.jpg\"]', 'Conjunto Beige', 100, 210, '180', NULL, 30, '2023-08-03', '2023-09-21 21:47:37'),
+(44, 18, 'gallery', '[\"38789.jpg\",\"71099.jpg\"]', 'Conjunto Beige', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:48:49'),
+(45, 18, 'gallery', '[\"26258.jpg\",\"79873.jpg\"]', 'Conjunto Blanco', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:48:54'),
+(46, 19, 'gallery', '[\"86981.jpg\",\"88573.jpg\"]', 'Conjunto Blanco', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:48:57'),
+(47, 19, 'gallery', '[\"40517.jpg\",\"54102.jpg\"]', 'Conjunto Beige', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:49:01'),
+(48, 20, 'gallery', '[\"81003.jpg\",\"28510.jpg\"]', 'Conjunto deportivo verde', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:49:06'),
+(49, 21, 'gallery', '[\"23224.jpg\",\"34013.jpg\",\"66353.jpg\"]', 'Tennis Verde', 100, 200, '150', NULL, 0, '2023-08-03', '2023-08-30 20:49:12'),
+(50, 21, 'gallery', '[\"38033.jpg\",\"97518.jpg\",\"79550.jpg\",\"41346.jpg\",\"98179.jpg\"]', 'Tennis Azul', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:49:18'),
+(51, 21, 'gallery', '[\"21891.jpg\",\"88137.jpg\",\"69877.jpg\",\"29563.jpg\",\"61658.jpg\"]', 'Tennis Rojo', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:49:25'),
+(52, 22, 'gallery', '[\"38033.jpg\",\"97518.jpg\",\"79550.jpg\",\"41346.jpg\",\"98179.jpg\"]', 'Tennis Azul', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:49:34'),
+(53, 22, 'gallery', '[\"99902.jpg\",\"61653.jpg\",\"77377.jpg\",\"34013.jpg\",\"66353.jpg\"]', 'Tennis Verde', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:49:38'),
+(54, 22, 'gallery', '[\"21891.jpg\",\"88137.jpg\",\"69877.jpg\",\"29563.jpg\",\"61658.jpg\"]', 'Tennis Rojo', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:49:43'),
+(55, 23, 'gallery', '[\"21891.jpg\",\"88137.jpg\",\"69877.jpg\",\"29563.jpg\",\"61658.jpg\"]', 'Tennis Rojo', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:49:49'),
+(56, 23, 'gallery', '[\"99902.jpg\",\"61653.jpg\",\"77377.jpg\",\"34013.jpg\",\"66353.jpg\"]', 'Tennis Verde', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:49:55'),
+(57, 23, 'gallery', '[\"38033.jpg\",\"97518.jpg\",\"79550.jpg\",\"41346.jpg\",\"98179.jpg\"]', 'Tennis Azul', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:50:12'),
+(58, 24, 'gallery', '[\"82088.jpg\",\"45600.jpg\"]', 'Calzado masculino', 100, 200, '150', NULL, 100, '2023-08-03', '2023-08-30 20:50:24'),
+(59, 25, 'video', 'https://youtu.be/sj8dV_gPKYw', 'Curso de CSS', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:06'),
+(60, 26, 'video', 'https://youtu.be/OVLptbCMny0', 'Curso de Bootstrap', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:10'),
+(61, 27, 'video', 'https://youtu.be/Sl5FaskVpD4', 'Curso de javascript', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:11'),
+(62, 28, 'video', 'https://youtu.be/QnQ9uhaa9sk', 'Curso de jQuery', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:12'),
+(63, 29, 'video', 'https://youtu.be/ntiWg5GIzAc', 'Curso de Canvas', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:13'),
+(64, 30, 'video', 'https://youtu.be/hZsQ_vVPwW0', 'Curso de PHP', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:14'),
+(65, 31, 'video', 'https://youtu.be/sj8dV_gPKYw', 'Curso de CSS', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:15'),
+(66, 32, 'video', 'https://youtu.be/OVLptbCMny0', 'Curso de Bootstrap', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:16'),
+(67, 33, 'video', 'https://youtu.be/Sl5FaskVpD4', 'Curso de javascript', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:20'),
+(68, 34, 'video', 'https://youtu.be/QnQ9uhaa9sk', 'Curso de jQuery', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:21'),
+(69, 35, 'video', 'https://youtu.be/ntiWg5GIzAc', 'Curso de Canvas', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:23'),
+(70, 36, 'video', 'https://youtu.be/hZsQ_vVPwW0', 'Curso de PHP', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:24'),
+(71, 37, 'video', 'https://youtu.be/sj8dV_gPKYw', 'Curso de CSS', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:25'),
+(72, 38, 'video', 'https://youtu.be/OVLptbCMny0', 'Curso de Bootstrap', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:26'),
+(73, 39, 'video', 'https://youtu.be/Sl5FaskVpD4', 'Curso de javascript', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:29'),
+(74, 40, 'video', 'https://youtu.be/QnQ9uhaa9sk', 'Curso de jQuery', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:31'),
+(75, 41, 'video', 'https://youtu.be/ntiWg5GIzAc', 'Curso de Canvas', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:32'),
+(76, 42, 'video', 'https://youtu.be/hZsQ_vVPwW0', 'Curso de PHP', 10, 30, '19', NULL, 0, '2023-08-05', '2023-08-30 20:51:33'),
+(77, 43, 'gallery', '[\"72409.jpg\"]', 'Collar', 10, 0, '0', NULL, 100, '2023-08-08', '2023-08-30 20:52:05'),
+(78, 44, 'gallery', '[\"36094.jpg\"]', 'Maleta Gris', 10, 0, '0', NULL, 100, '2023-08-08', '2023-08-30 20:52:09'),
+(79, 45, 'gallery', '[\"51340.jpg\"]', 'Maleta Verde', 10, 0, '0', NULL, 100, '2023-08-08', '2023-08-30 20:52:10'),
+(80, 46, 'gallery', '[\"72980.jpg\"]', 'Anillo', 10, 0, '0', NULL, 100, '2023-08-08', '2023-08-30 20:52:12');
 
 -- --------------------------------------------------------
 
@@ -553,7 +553,7 @@ CREATE TABLE `visits` (
   `city_visit` text,
   `date_created_visit` date DEFAULT NULL,
   `date_updated_visit` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `visits`
