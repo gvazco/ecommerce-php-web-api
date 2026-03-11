@@ -44,8 +44,8 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id_admin`, `rol_admin`, `name_admin`, `email_admin`, `password_admin`, `token_admin`, `token_exp_admin`, `date_created_admin`, `date_updated_admin`) VALUES
-(1, 'admin', 'Jose Tienda', 'admin@ecommerce.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTY4NDk2OTcsImV4cCI6MTcxNjkzNjA5NywiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6ImFkbWluQGVjb21tZXJjZS5jb20ifX0.YQFjMlJoZf3QzCHxT6KKgDsd1L6MqBdwLOhC9ZGHHg4', '1716936097', '2022-09-21', '2024-05-28 14:31:36'),
-(3, 'editor', 'Juan Editor', 'editor@ecommerce.com', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTY4NTEwMDAsImV4cCI6MTcxNjkzNzQwMCwiZGF0YSI6eyJpZCI6IjMiLCJlbWFpbCI6ImVkaXRvckBlY29tbWVyY2UuY29tIn19.HOzoTXcQDEkjEATdFeM2EjWOts3p7U6L45aj444WRrk', '1716937400', '2024-05-27', '2024-05-27 23:05:38');
+(1, 'admin', 'Jose Tienda', 'admin@web-ecommerce.core-hub-plex.cloud', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTY4NDk2OTcsImV4cCI6MTcxNjkzNjA5NywiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6ImFkbWluQGVjb21tZXJjZS5jb20ifX0.YQFjMlJoZf3QzCHxT6KKgDsd1L6MqBdwLOhC9ZGHHg4', '1716936097', '2022-09-21', '2024-05-28 14:31:36'),
+(3, 'editor', 'Juan Editor', 'editor@web-ecommerce.core-hub-plex.cloud', '$2a$07$azybxcags23425sdg23sdeanQZqjaf6Birm2NvcYTNtJw24CsO5uq', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTY4NTEwMDAsImV4cCI6MTcxNjkzNzQwMCwiZGF0YSI6eyJpZCI6IjMiLCJlbWFpbCI6ImVkaXRvckBlY29tbWVyY2UuY29tIn19.HOzoTXcQDEkjEATdFeM2EjWOts3p7U6L45aj444WRrk', '1716937400', '2024-05-27', '2024-05-27 23:05:38');
 
 -- --------------------------------------------------------
 
@@ -300,8 +300,8 @@ CREATE TABLE `slides` (
 --
 
 INSERT INTO `slides` (`id_slide`, `background_slide`, `direction_slide`, `img_png_slide`, `coord_img_slide`, `text_slide`, `coord_text_slide`, `link_slide`, `text_btn_slide`, `status_slide`, `date_created_slide`, `date_updated_slide`) VALUES
-(1, 'back_default.jpg', 'opt1', 'calzado.png', 'top:15%; right:10%; width:45%', '[{\"text\":\"Lorem Ipsum\",\"color\":\"#333\"},{\"text\":\"Lorem ipsum dolor sit\",\"color\":\"#777\"},{\"text\":\"Lorem ipsum dolor sit\",\"color\":\"#888\"}]', 'top:20%; left:10%; width:40%', 'http://ecommerce.com/calzado', 'VER PRODUCTO', 1, '2024-05-22', '2024-05-22 19:00:50'),
-(2, 'fondo2.jpg', 'opt2', 'iphone.png', 'bottom:0%; left:15%; width:28%', '[{\"text\":\"Lorem Ipsum\",\"color\":\"#ffffff\"},{\"text\":\"Lorem ipsum dolor sit\",\"color\":\"#e8e8e8\"},{\"text\":\"Lorem ipsum dolor sit\",\"color\":\"#d6d6d6\"}]', 'top:20%; right:15%; width:40%', 'http://ecommerce.com/no-found', 'VER PRODUCTO', 1, '2024-05-22', '2024-05-22 19:00:49'),
+(1, 'back_default.jpg', 'opt1', 'calzado.png', 'top:15%; right:10%; width:45%', '[{\"text\":\"Lorem Ipsum\",\"color\":\"#333\"},{\"text\":\"Lorem ipsum dolor sit\",\"color\":\"#777\"},{\"text\":\"Lorem ipsum dolor sit\",\"color\":\"#888\"}]', 'top:20%; left:10%; width:40%', 'http://web-ecommerce.core-hub-plex.cloud/calzado', 'VER PRODUCTO', 1, '2024-05-22', '2024-05-22 19:00:50'),
+(2, 'fondo2.jpg', 'opt2', 'iphone.png', 'bottom:0%; left:15%; width:28%', '[{\"text\":\"Lorem Ipsum\",\"color\":\"#ffffff\"},{\"text\":\"Lorem ipsum dolor sit\",\"color\":\"#e8e8e8\"},{\"text\":\"Lorem ipsum dolor sit\",\"color\":\"#d6d6d6\"}]', 'top:20%; right:15%; width:40%', 'http://web-ecommerce.core-hub-plex.cloud/no-found', 'VER PRODUCTO', 1, '2024-05-22', '2024-05-22 19:00:49'),
 (4, 'bg.jpg', '', '', '', '', '', '', '', 1, '2024-05-22', '2024-05-22 19:00:48');
 
 -- --------------------------------------------------------
